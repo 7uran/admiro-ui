@@ -1,9 +1,12 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import ProjectCard from "../components/card/ProjectCard";
 import { useRequestMutation } from "@/http/axiosFetcher";
 import { Project } from "@/types/type";
-import EmptyState from "../components/emptyState/emptyState"
+import EmptyState from "../components/emptyState/emptyState";
+import Link from "next/link"; // Import Link from Next.js
+
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
   const { trigger: loadProjects, isMutating, error } = useRequestMutation<{ message: string, data: Project[] }>(
@@ -53,7 +56,15 @@ export default function Home() {
   }
 
   return (
-    <main>
+    <main className="px-4 py-8">
+
+      <div className="mb-8">
+        <Link href="/create">
+          <button className="p-2 bg-blue-600 text-white rounded">Create Project</button>
+        </Link>
+      </div>
+
+
       <div className="w-[1240px] mx-auto gap-10 flex flex-wrap">
         {projects.length > 0 ? (
           projects.map((project) => (

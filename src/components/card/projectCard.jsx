@@ -14,7 +14,7 @@ const ProjectCard = ({
     progress 
 }) => {
     return (
-        <div className="border-2 border-gray-300 px-7 py-4 border-dashed flex flex-col bg-red-100 rounded-lg w-[422px]">
+        <div className="border-2 border-gray-300 px-7 py-4 border-dashed flex flex-col rounded-lg w-[422px]">
             <div className="flex justify-end">
             <div className="py-1">
             <p className={clsx(
@@ -30,7 +30,7 @@ const ProjectCard = ({
         </div>
             </div>
             <div className="py-1">
-                <p className="text-red-600 font-semibold">{title}</p>
+                <p className=" font-semibold">{title}</p>
             </div>
             <div className="flex items-center text-sm text-gray-400 gap-1 py-1">
                 <Image
@@ -50,15 +50,15 @@ const ProjectCard = ({
             <div className="py-1">
                 <div className="flex items-center justify-between w-40 text-sm">
                     <p className="text-gray-400">Issues</p>
-                    <span className="text-red-600">{issues}</span>
+                    <span className="text-gray-600">{issues}</span>
                 </div>
                 <div className="flex items-center justify-between w-40 text-sm">
                     <p className="text-gray-400">Resolved</p>
-                    <span className="text-red-600">{resolved}</span>
+                    <span className="text-gray-600">{resolved}</span>
                 </div>
                 <div className="flex items-center justify-between w-40 text-sm">
                     <p className="text-gray-400">Comments</p>
-                    <span className="text-red-600">{comment}</span>
+                    <span className="text-gray-600">{comment}</span>
                 </div>
             </div>
             <div className="py-1">
